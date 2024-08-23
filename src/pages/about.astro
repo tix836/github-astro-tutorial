@@ -1,5 +1,8 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "About me";
 const identity = {
@@ -15,7 +18,7 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "navy";
-const fontWeight = 'bold';
+const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
@@ -26,7 +29,8 @@ const textCase = "uppercase";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
+
+        <style define:vars={{ skillColor, fontWeight, textCase }}>
             h1 {
                 color: purple;
                 font-size: 4rem;
@@ -40,10 +44,7 @@ const textCase = "uppercase";
         </style>
     </head>
     <body>
-        <a href="/">На Главную</a>
-        <a href="/about/">Обо мне</a>
-        <a href="/blog/">Блог</a>
-
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>...and my astro site</h2>
         <p>Я пытаюсь изучать Астро</p>
@@ -82,5 +83,6 @@ const textCase = "uppercase";
                 <p>My goal is not 3 days.</p>
             )
         }
+        <Footer />
     </body>
 </html>

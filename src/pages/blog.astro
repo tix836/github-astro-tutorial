@@ -1,22 +1,23 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
-const pageTitle = "Блог"
+const pageTitle = "Блог";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <a href="/">На Главную</a>
-        <a href="/about/">Обо мне</a>
-        <a href="/blog/">Блог</a>
-        
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <Header />
+
         <h1>{pageTitle}</h1>
         <h2>...and my astro site</h2>
         <p>Я пытаюсь изучать Астро</p>
@@ -27,5 +28,6 @@ const pageTitle = "Блог"
             <li><a href="/posts/post-2/">Post 2</a></li>
             <li><a href="/posts/post-3/">Post 3</a></li>
         </ul>
-	</body>
+        <Footer />
+    </body>
 </html>
